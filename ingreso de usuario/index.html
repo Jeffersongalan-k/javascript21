@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INGRESO de USUARIO</title>
+  </head>
+  <body>
+    <input type="text" id="pass" />
+    <button onclick="mostra()">INGRESAR</button>
+    <h1 id="pass1"><b>NO SE TU NOMBRE</b></h1>
+
+    <script>
+
+    
+    
+    
+      function mostra() { //llamamos la funcion
+        let elemento = document.getElementById("pass"); // creamos una variable 
+        let elemento1 = document.getElementById("pass1");
+        elemento1.textContent = "tu te llamas " + elemento.value;
+      }
+    </script>
+  </body>
+</html>

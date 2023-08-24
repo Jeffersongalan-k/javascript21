@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <input type="number" id="pass">
+    
+<button onclick="comenzar()" > alarma</button>
+     <h1 id="alarma1" style="color: red;">APAGADO</h1>
+<script>
+
+
+let elemento = document.getElementById("pass");
+let elementoalarma= document.getElementById("alarma1") 
+
+
+function comenzar(){
+    setTimeout(tiempo,1000 * elemento.value);
+
+}
+  
+
+
+
+function tiempo (){
+    elementoalarma.textContent = "ENCENDIDO"
+} 
+
+
+</script>
+
+</body>
+</html>
