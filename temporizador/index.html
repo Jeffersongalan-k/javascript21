@@ -1,50 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>TEMPORIZADOR</title>
-</head>
+
+
+  </head>
 <body>
+    <input type="number" id="pass" />
 
+    <button onclick="comenzar()">alarma</button>
+    <h1 id="alarma1" style="color: red">APAGADO</h1>
 
-    <input type="number" id="pass"> 
-    
-<button onclick="comenzar()" > alarma</button>
-<h1 id="alarma1" style="color: red;">APAGADO</h1>
+    <audio controls id="audio1">
+      <!-- UN AUDIO QUE CUENTA CON TEMPORIZADOR Y LO PUEDES CONTROLAR -->
 
- <audio controls id="audio1"> <!-- UN AUDIO QUE CUENTA CON TEMPORIZADOR Y LO PUEDES CONTROLAR -->
-    
-    
-    <source src="/temporizador/Ay Caramba.mp3" type="audio/mpeg">
+      <source src="/temporizador/Ay Caramba.mp3" type="audio/mpeg" />
 
-      sonido no habilitado 
-
+      sonido no habilitado
     </audio>
 
-<script>
+    <script>
+      let elemento = document.getElementById("pass");
+      let elementoalarma = document.getElementById("alarma1");
+      let sonido = document.getElementById("audio1");
 
-let elemento = document.getElementById("pass");
-let elementoalarma= document.getElementById("alarma1"); 
-let sonido = document.getElementById("audio1");
+      function comenzar() {
+        setTimeout(tiempo, 1000 * elemento.value);
+      }
 
-function comenzar(){
-    setTimeout(tiempo,1000 * elemento.value);
-
-}
-  
-
-
-
-
-function tiempo (){
-    elementoalarma.textContent = "ENCENDIDO"
-    elementoalarma.style.color = "blue"
-     sonido.play();
-} 
-
-
-</script>
-
+      function tiempo() {
+        elementoalarma.textContent = "ENCENDIDO";
+        elementoalarma.style.color = "blue";
+        sonido.play();
+      }
+    </script>
 </body>
 </html>

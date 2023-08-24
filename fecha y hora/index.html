@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>TEMPORIZADOR</title>
+
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+
+  <body onload="comenzar()">
+    <div>
+      <h1 id="alarma1">00:00:00</h1>
+    </div>
+    <h3>AQUI COMIENZA TODO</h3>
+
+    <script>
+      let elemento = document.getElementById("pass");
+      let elementoalarma = document.getElementById("alarma1");
+
+      function comenzar() {
+        setInterval(tictac, 1000);
+      }
+      function tictac() {
+        let tiempo = new Date();
+        let hora = tiempo.getHours();
+        let minutos = tiempo.getMinutes();
+        let segundo = tiempo.getSeconds();
+        let textHora = hora + ":" + minutos + ":" + segundo;
+
+        elementoalarma.textContent = textHora;
+      }
+    </script>
+  </body>
+</html>
